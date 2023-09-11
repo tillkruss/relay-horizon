@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cc1a446cb54efbb94c0ce545d933e38",
+    "content-hash": "ee537ade04a2e8107f6946503988f36a",
     "packages": [
         {
             "name": "brick/math",
@@ -60,6 +60,66 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "cachewerk/relay",
+            "version": "v0.6.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cachewerk/relay.git",
+                "reference": "bf1cf9be078536ce921a2eba71d1e0208c8b0bcb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cachewerk/relay/zipball/bf1cf9be078536ce921a2eba71d1e0208c8b0bcb",
+                "reference": "bf1cf9be078536ce921a2eba71d1e0208c8b0bcb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-relay": "*",
+                "php": "^7.4|^8.0"
+            },
+            "provide": {
+                "psr/simple-cache-implementation": "^1|^2|^3"
+            },
+            "require-dev": {
+                "illuminate/redis": "^7|^8|^9|^10",
+                "open-telemetry/api": "^0.0.17|^1.0",
+                "phpstan/phpstan": "^1.7",
+                "predis/predis": "^1.1|^2.0",
+                "psr/simple-cache": "^1|^2|^3",
+                "symfony/console": "^5.0|^6.0"
+            },
+            "suggest": {
+                "ext-redis": "Required to run benchmarks.",
+                "ext-relay": "Required to use package."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CacheWerk\\Relay\\Laravel\\RelayServiceProvider"
+                    ],
+                    "aliases": {
+                        "Relay": "CacheWerk\\Relay\\Laravel\\Relay"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CacheWerk\\Relay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The next-generation caching layer for PHP.",
+            "support": {
+                "issues": "https://github.com/cachewerk/relay/issues",
+                "source": "https://github.com/cachewerk/relay/tree/v0.6.7"
+            },
+            "time": "2023-08-28T17:39:06+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

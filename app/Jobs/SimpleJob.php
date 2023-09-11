@@ -30,5 +30,11 @@ class SimpleJob implements ShouldQueue
         $redis = app('redis');
         $redis->set($key, 'bar');
         $redis->get($key);
+
+        $redis = app('cache');
+        $redis->set($key, 'bar');
+        $redis->get($key);
+
+        // dump($redis);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Jobs\SimpleJob;
 use Illuminate\Http\Request;
+use CacheWerk\Relay\Laravel\Relay;
 
 class DispatchController extends Controller
 {
@@ -14,6 +15,8 @@ class DispatchController extends Controller
     {
         SimpleJob::dispatch(mt_rand());
 
-        return response('job dispatched');
+        return response()->json(
+            Relay::stats()
+        );
     }
 }
